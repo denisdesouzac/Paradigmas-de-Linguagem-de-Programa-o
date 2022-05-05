@@ -1,0 +1,9 @@
+nroElementos([], 0).
+nroElemntos([C|R], Total):-
+    nroElememto(R, Tot)
+
+media(C, C).
+media(L, M) :-
+    M is nroElementos() / soma(L).
+
+

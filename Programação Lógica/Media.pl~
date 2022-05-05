@@ -1,0 +1,23 @@
+ /*nroElementos([], 0).
+nroElementos(_|R, N) :-
+	nroElementos(R, N1),
+	N is N1 + 1.
+
+soma([], 0).
+soma([C|R], S) :-
+    soma(R, S1),
+    S is C + S1.
+
+media([], 0).
+media(L, M) :-
+    M is soma(L)  nroElementos(L).
+*/
+
+intecala(L, [], L).
+intercala([C1|R1], [C2|R2], Resto):-
+	intercala(C2, R1, Resto),
+	intercala(R2, R1, Resto).
+	
+concatena([], L, L).
+concatena([C|R], L, [C|Outros]):-
+	concatena(R, L, Outros).
